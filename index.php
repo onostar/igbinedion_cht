@@ -491,7 +491,7 @@
                 </figure>
             </div>
         </section>
-        <!-- recent projects -->
+        <!-- online courses -->
         <Section id="plans">
             <h3 class="plans_title">Online Courses</h3>
             <h2>Check out courses taught by our professionals</h2>
