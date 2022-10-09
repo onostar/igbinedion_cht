@@ -5,25 +5,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bob & sil is an oil and gas company dedicated to providing off-shore and on-shore services across the globe .">
-    <meta name="keyword" content="Bob & sil, oil and gas energy, haulage, tank, tank farm" />
+<meta charset="UTF-8">
+    <meta name="description" content="Igbinedion Cllege of Health is an Educational INstitution dedicated to the training of students to become professionals in the Health sector">
+    <meta name="keyword" content="Igbinedion College of Health, ICH, college of health, heath, pharmacy, health education" />
+    
 	<meta name="author" content=""/>
 	<meta name="og:url" property="og:url" content="https://">
     <meta name="og:type "property="og:type" content="website">
     <meta name="og:title" property="og:title" content="" />
     <meta name="og:site_name" property="og:site_name" content="" />
-    <meta name="og:description" property="og:description" content="Bob & sil is an oil and gas company dedicated to providing off-shore and on-shore services across the globe">
-    <meta name="og:image" property="og:image" itemprop="image" content="images/bobsil_logo.png">
+    <meta name="description" content="Igbinedion Cllege of Health is an Educational INstitution dedicated to the training of students to become professionals in the Health sector">
+    <meta name="og:image" property="og:image" itemprop="image" content="images/logo.png">
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
-    <title>Bob & sil Global | Projects</title>
+    <title>ICHT | Fundamental Health technology</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
     <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.min.css">
     
-    <link rel="icon" href="images/bobsil_logo.JPG" type="image/png" size="32X32">
+    <link rel="icon" href="images/logo.png" type="image/png" size="32X32">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

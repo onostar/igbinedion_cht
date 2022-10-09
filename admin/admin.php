@@ -14,19 +14,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bob and sil is an oil and gas company dedicated to providing off-shore and on-shore services across the globe .">
-    <meta name="keyword" content="Bob and sil, oil and gas energy, haulage, tank, tank farm" />
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta name="description" content="Igbinedion Cllege of Health is an Educational INstitution dedicated to the training of students to become professionals in the Health sector">
+    <meta name="keyword" content="Igbinedion College of Health, ICH, college of health, heath, pharmacy, health education" />
+    
 	<meta name="author" content=""/>
 	<meta name="og:url" property="og:url" content="https://">
     <meta name="og:type "property="og:type" content="website">
     <meta name="og:title" property="og:title" content="" />
     <meta name="og:site_name" property="og:site_name" content="" />
-    <meta name="og:description" property="og:description" content="Bob and sil is an oil and gas company dedicated to providing off-shore and on-shore services across the globe">
-    <meta name="og:image" property="og:image" itemprop="image" content="../images/bobsil_logo.jpg">
+    <meta name="description" content="Igbinedion Cllege of Health is an Educational INstitution dedicated to the training of students to become professionals in the Health sector">
+    <meta name="og:image" property="og:image" itemprop="image" content="images/logo.png">
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
-    <title>Admin | Bob & Sil Global service</title>
+    <title>ICHT | Admin Portal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.css">
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.min.css">
@@ -43,8 +45,8 @@
         
         <header>
             <h1 class="logo">
-                <a href="admin.php" title="Bob & Sil">
-                    <img src="../images/bobsil_logo.JPG" alt="Logo" class="img-fluid">
+                <a href="admin.php" title="ICHT">
+                    <img src="../images/logo.png" alt="Logo" class="img-fluid">
                 </a>
             </h1>
             <div class="search" id="admin_search">
@@ -96,6 +98,7 @@
                     <ul>        
                     <li><a href="javascript:void(0);" id="event" class="page_navs" data-page="events_news"><i class="fas fa-calendar"></i> Projects</a></li>
                         <li><a href="javascript:void(0);" id="galleryBtn" class="page_navs" data-page="gallery"><i class="fas fa-photo-video"></i> Gallery</a></li>
+                        <li><a href="javascript:void(0);" id="event" class="page_navs" data-page="events_news"><i class="fas fa-newspaper"></i> Events & News</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -112,8 +115,9 @@
                 <nav>
                     <h3><a href="admin.php" title="Home"><i class="fas fa-home"></i> Dashboard</a></h3>
                     <ul>        
-                        <li><a href="javascript:void(0);" id="event" class="page_navs" data-page="events_news"><i class="fas fa-calendar"></i> Projects</a></li>
+                        <li><a href="javascript:void(0);" id="event" class="page_navs" data-page="events_news"><i class="fas fa-calendar"></i> Courses</a></li>
                         <li><a href="javascript:void(0);" id="galleryBtn" class="page_navs" data-page="gallery"><i class="fas fa-photo-video"></i> Gallery</a></li>
+                        <li><a href="javascript:void(0);" id="event" class="page_navs" data-page="events_news"><i class="fas fa-newspaper"></i> Events & News</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -142,8 +146,8 @@
                 <div id="dashboard">
                     
                     <div class="cards" id="card4">
-                        <a href="javascript:void(0)" data-page="events_news" class="page_navs">
-                            <p>Projects Compeleted</p>
+                        <a href="javascript:void(0)" data-page="courses" class="page_navs">
+                            <p>Courses Uploaded</p>
                             <div class="infos">
                                 <i class="fas fa-helmet-safety"></i>
                                 <?php
@@ -174,15 +178,29 @@
                             </div>
                         </a>
                     </div> 
-                    
+                    <div class="cards" id="card3">
+                        <a href="javascript:void(0)" data-page="events_news" class="page_navs">
+                            <p>News and updates</p>
+                            <div class="infos">
+                                <i class="fas fa-newspaper"></i>
+                                <p>
+                                    <?php
+                                        $get_gallery = $connectdb->prepare("SELECT * FROM news_events");
+                                        $get_gallery->execute();
+                                        echo $get_gallery->rowCount();
+                                    ?>
+                                </p>
+                            </div>
+                        </a>
+                    </div> 
                    
                 </div>
-                <!-- events and news -->
-                <div id="events_news"class="displays">
+                <!-- Courses -->
+                <div id="courses"class="displays">
                     <div class="info"></div>
                     <div class="add_user_form" id="brd_mess">
-                        <h3>Post projects</h3>
-                        <form method="POST" action="../controller/post_news.php" enctype="multipart/form-data">
+                        <h3>Post course</h3>
+                        <form method="POST" action="../controller/post_courses.php" enctype="multipart/form-data">
                             <div class="inputs">
                                 <div class="data">
                                     <label for="subject">Title</label><br>
@@ -202,7 +220,7 @@
                             <button type="submit" id="post_event" name="post_event">Post <i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
-                    <!-- uploaded projects -->
+                    <!-- uploaded courses -->
                     <div class="uploaded">
                         <?php
                             $get_images = $connectdb->prepare("SELECT * FROM projects ORDER BY post_date DESC");
@@ -217,7 +235,6 @@
                             </div>
                             <figcaption>
                                 <h4><?php echo $photo->title?></h4>
-                                <p><?php echo $photo->details?></p>
                                 <a href="javascript:void(0)" title="Delete Project" onclick="deleteProject('<?php echo $photo->project_id?>')"><i class="fas fa-trash"></i></a>
                             </figcaption>
                         </figure>
@@ -264,7 +281,54 @@
                         <?php endforeach?>
                     </div>
                 </div>
-                
+                <!-- post news and updates -->
+                <div id="events_news"class="displays">
+                    <div class="info"></div>
+                    <div class="add_user_form" id="brd_mess">
+                        <h3>Post events/news</h3>
+                        <form method="POST" action="../controller/post_news.php" enctype="multipart/form-data">
+                            <div class="inputs">
+                                <div class="data">
+                                    <label for="subject">Title</label><br>
+                                    <input type="text" name="title" id="title" placeholder="Event/news title" required>
+                                </div>
+                                <div class="data">
+                                    <label for="event_img">Upload Cover image (not more than 300kb)</label>
+                                    <input type="file" name="photo" id="photo">
+                                </div>
+                                
+                            </div>
+                            <div class="inputs">
+                                <div class="data" style="width:100%; margin-top:0px;">
+                                    <label for="broadcast_message">Details</label><br>
+                                    <textarea name="details" id="details" cols="40" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" id="post_event" name="post_event">Post <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <!-- uploaded events and news -->
+                    <div class="uploaded">
+                        <?php
+                            $get_images = $connectdb->prepare("SELECT * FROM news_events ORDER BY post_date DESC");
+                            $get_images->execute();
+                            $photos = $get_images->fetchAll();
+                            foreach($photos as $photo):
+                        ?>
+                        <figure>
+                            <div class="photo">
+                                <img src="<?php echo '../media/'.$photo->photo?>" alt="event">
+
+                            </div>
+                            <figcaption>
+                                <h4><?php echo $photo->title?></h4>
+                                <!-- <p><?php echo $photo->details?></p> -->
+                                <a href="javascript:void(0)" title="Delete Event" onclick="deleteArticle('<?php echo $photo->article_id?>')"><i class="fas fa-trash"></i></a>
+                            </figcaption>
+                        </figure>
+                        <?php endforeach?>
+                    </div>
+                </div>
             </section>
 
         </div>

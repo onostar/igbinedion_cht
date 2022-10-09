@@ -15,7 +15,7 @@
         <meta name="og:image" property="og:image" itemprop="image" content="images/logo.jpg">
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
-        <title>About us</title>
+        <title>ICHT | About us</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
         <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.min.css">

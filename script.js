@@ -524,6 +524,13 @@ function deletePhoto(photo){
         window.open("../controller/delete_photo.php?photo="+photo, "_parent");
     }
 }
+/* delete article */
+function deleteArticle(article){
+    let delArt = confirm("Do you want to delete this article?", "");
+    if(delArt){
+        window.open("../controller/delete_article.php?news="+article, "_parent");
+    }
+}
 
 /* view notification */
 function viewMessage(not_id){

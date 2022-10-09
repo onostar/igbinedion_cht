@@ -118,7 +118,7 @@
                 </div>
                 <div class="slide">
                     <div class="banner_img">
-                        <img src="images/college2.jpg" alt="ICH Banner">
+                        <img src="images/banner4.jpeg" alt="ICH Banner">
                     </div>
                     <div class="taglines">
                         <div class="taglines_note">
@@ -136,7 +136,7 @@
                 </div>
                 <div class="slide">
                     <div class="banner_img">
-                        <img src="images/college3.jpg" alt="ICH Banner">
+                        <img src="images/banner2.jpeg" alt="ICH Banner">
                     </div>
                     <div class="taglines">
                         <div class="taglines_note">
@@ -238,13 +238,19 @@
         <div class="trendings">
             <marquee behavior="" direction="">
                 <?php
-                    $get_trends = $connectdb->prepare("SELECT * FROM news_events ORDER BY post_date DESC LIMIT 5");
+                    $get_trends = $connectdb->prepare("SELECT * FROM news_events ORDER BY post_date DESC LIMIT 6"); 
                     $get_trends->execute();
                     $trends = $get_trends->fetchAll();
                     foreach($trends as $trend):
                 ?>
                         <a href="javascript:void(0)" onclick="viewArticle('<?php echo $trend->article_id?>')"><i class="fas fa-angle-double-right"></i> <?php echo $trend->title?></a>
                 <?php endforeach?>
+                <?php
+                    if(!$get_trends->rowCount() > 0 ){
+                        echo "<h3>No recent stories</h3>";
+                    }
+
+                ?>
             </marquee>
             
         </div>
@@ -294,7 +300,7 @@
                 </div>
             </div>
             <div class="feature_img">
-                <img src="images/college1.jpg" alt="Our services">
+                <img src="images/banner3.jpeg" alt="Our services">
             </div>
         </section>
         <!-- about page -->
@@ -304,7 +310,7 @@
                     <img src="images/college2.jpg" alt="banner">
                 </div>
                 <div class="clients">
-                    <img src="images/students.jpg" alt="banner">
+                    <img src="images/banner2.jpeg" alt="banner">
 
                 </div>
             </div>
@@ -384,7 +390,7 @@
                 </div>
                 <div class="service_box">
                 <div class="service_img">
-                        <img src="images/college3.jpg" alt="hero">
+                        <img src="images/banner4.jpeg" alt="hero">
                     </div>
                     <div class="service_note">
                         <i class="fas fa-users"></i>
@@ -535,7 +541,7 @@
             <p class="first_p">Student gallery for the past sessions</p>
             <div class="plans">
                 <?php 
-                    $get_photos = $connectdb->prepare("SELECT * FROM gallery ORDER BY post_date LIMIT 8");
+                    $get_photos = $connectdb->prepare("SELECT * FROM gallery ORDER BY post_date DESC LIMIT 8");
                     $get_photos->execute();
                     $photos = $get_photos->fetchAll();
                     foreach($photos as $photo):
@@ -568,7 +574,7 @@
                 <a href="contact.html"><i class="fa-solid fa-graduation-cap"></i> Apply now <i class="fa-solid fa-angle-double-right"></i></a>
             </div>
             <div class="invest_img">
-                <img src="images/students.jpg" alt="Investment">
+                <img src="images/banner.jpeg" alt="Investment">
 
             </div>
         </section>
@@ -686,6 +692,12 @@
                     </a>
                 </article>
                 <?php endforeach?>
+                <?php
+                    if(!$get_events->rowCount() > 0 ){
+                        echo "<h3>No recent stories</h3>";
+                    }
+
+                ?>
             </div>
             <div class="more">
                 <a href="events_news.php">View more <i class="fas fa-angle-double-right"></i></a>
