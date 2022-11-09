@@ -1263,6 +1263,7 @@ main{
     width:85%;
     margin:70px auto;
     gap:1rem;
+    align-items: center;
 }
 .reasons{
     padding:10px;
@@ -4938,7 +4939,7 @@ header i{
     }
     #banner{
         position:relative;
-        min-height:120vh;
+        /* min-height:120vh; */
         width:100%;
     }
     .main_header{
@@ -4950,7 +4951,7 @@ header i{
         border-bottom:2px solid #c4c4c4;
     }
     .main_header h1{
-        width:45vw;
+        width:40vw;
         margin-left:10px;
         padding:0;
     }
@@ -4960,12 +4961,12 @@ header i{
         margin-left:20px;
     }
     .main_header h1 img{
-        width:100%;
+        width:90%;
         margin:10px;
         height:10vh;
     }
     .new_header h1 img{
-        width:100%;
+        width:90%;
         margin:5px;
     }
     #navigation{
@@ -4989,13 +4990,10 @@ header i{
     nav ul li{
         display:block;
     }
-    .main_header nav ul li a{
+    .main_header nav ul li a, .new_header nav ul li a{
         display:block;
         padding:10px;
-    }
-    .new_header nav ul li a{
-        display:block;
-        padding:10px;
+        color:#fff;
     }
     nav ul li a i{
         color:#fff;
@@ -5007,7 +5005,7 @@ header i{
         /* border-bottom:2px solid var(--primaryColor); */
     }
     nav ul li ul{
-        /* left:10%; */
+        left:50%;
         overflow-x:hidden;
     }
     aside nav ul li ul li {
@@ -5019,6 +5017,18 @@ header i{
     
     #login{
         padding:10px;
+        
+    }
+    .new_header .quote{
+        display:block;
+    }
+    .quote a{
+        background:var(--moreColor);
+        color:#fff;
+        padding:10px;
+    }
+    .quote i{
+        color:#fff;
     }
     .menu-icon, .menu_icon{
         display:block;
@@ -5031,7 +5041,7 @@ header i{
         color:#fff;
     }
     .main_header .menu-icon a, .new_header .menu-icon a{
-        color:#fff;
+        color:var(--secondaryColor);
     }
     .new_header .menu-icon a:hover{
         color:var(--secondaryColor);
@@ -5045,7 +5055,6 @@ header i{
        left:0;
         width:100%;
         height:100%;
-        gap:0;
         
     }
     .taglines h2{
@@ -5053,27 +5062,29 @@ header i{
         /* background:var(--tertiaryColor); */
         color:#fff;
         font-size:2rem;
-        text-align:center;
+        /* text-align:center; */
     }
     .taglines p{
-        font-size:1.2rem;
-        margin:20px 0;
-        width:70%;
-        margin:0 auto;
-        text-align:center;
+        font-size:1rem;
+        margin-top:10px;
+        width:90%;
+        /* margin:0 auto; */
+        /* text-align:center; */
     }
     .taglines .btns a{
         font-size:.8rem;
         padding:10px;
         margin-top:10px;
+        width:auto;
     }
     .taglines_note{
         width:100%;
         height:100%;
-        align-items: center;
+        /* align-items: center; */
         /* justify-content: space-evenly; */
         flex-wrap: wrap;
-        gap:1rem;
+        gap:.7rem;
+        margin-left:20px;
     }
     .big_icons{
         width:80%;
@@ -5153,6 +5164,57 @@ header i{
     #request_form form .inputss .data i{
         padding:10px;
     }
+    /* summary services */
+    /* #service_summary{
+        display:none;
+    } */
+    .sum_serv{
+        width:80%;
+        /* background:#fff;
+        box-shadow:2px 2px 2px var(--otherColor);
+        padding:10px;
+        transition:.3s all ease-in-out; */
+        margin:10px auto;
+    }
+    /* features */
+    #features{
+        width:95%;
+        /* box-shadow: none; */
+        padding:70px 40px;
+    }
+    .features{
+        width:100%;
+    }
+    .features h3:first-child{
+        font-size:.9rem;
+    }
+    .features h4{
+        font-size:1.5rem;
+    }
+    .features h2{
+        font-size: 2rem;
+    }
+    .feature_img{
+        width:100%;
+        height:100%;
+    }
+    .feats .feat{
+        /* text-align:center; */
+        width:95%;
+        padding:10px;
+        margin-bottom:10px;
+    }
+    .feats hr{
+        height:auto;
+        display:none;
+    }
+    .feat i{
+        font-size:2.6rem;
+        margin:10px 0;
+    }
+    .feat h3{
+        font-size:1.1rem;
+    }
     /* about section */
     /* hero section */
     .whyChoose{
@@ -5172,7 +5234,7 @@ header i{
         height:100%;
     }
     .whyChoose .choose_text .texts{
-        overflow:scroll;
+        overflow-y:scroll;
     }
     .whyChoose .choose_text .texts h2{
         /* text-align:center; */
@@ -5228,43 +5290,7 @@ header i{
         margin:10px auto;
         width:40px;
     }
-    /* covid section */
-    #covid{
-        display:flex;
-        flex-direction:row-reverse;
-        height:400px;
-        margin:50px 0;
-    }
-    #covid img{
-        width:50%;
-    }
-    #covid .choose_text{
-        width:50%;
-        height:100%;
-    }
-    #covid .choose_text .texts{
-        overflow:visible;
-        padding:0;
-    }
-    #covid .choose_text .texts h2{
-        font-size:1.8rem;
-        letter-spacing: 2px;
-        padding:5px;
-        margin:0;
-    }
-    #covid .choose_text .texts p{
-        font-size:.9rem;
-        padding:4px;
-    }
-    #covid .btns{
-        margin:0 auto;
-    }
-    #covid .btns a{
-        background:var(--secondaryColor);
-    }
-    #covid .choose_text .chooseImg:after{
-        background:var(--primaryColor);
-    }
+    
     /* blog section */
     .trends .topics article{
         width:100%;
@@ -5400,18 +5426,22 @@ header i{
         font-size:1rem;
     }
     #team{
-        width:90%;
+        width:95%;
         margin:40px auto;
+        gap:.3rem;
     }
     #team p{
         width:80%;
     }
+    .team{
+        align-items: flex-start;
+    }
     #team .team figure{
-        min-height:200px;
-        width:40%;
+        height:200px;
+        width:47%;
     }
     .team figure img{
-        height:200px;
+        height:100px;
     }
     /* .team figure figcaption{
         
@@ -5524,11 +5554,14 @@ header i{
         width:100%;
         min-height:400px;
     }
+    .banner_img{
+        width:100%;
+    }
     .clients{
-        position:absolute;
-        left:-5%;
-        width:120px;
-        height:150px;
+        /* position:absolute;
+        left:-5%; */
+        width:80%;
+        /* height:150px; */
     }
 
     .clients .client_icon i{
@@ -5542,10 +5575,14 @@ header i{
     }
     .about_text{
         width:100%;
-        text-align:Center;
+        /* text-align:Center; */
+    }
+    .about_text h3{
+        margin:0;
     }
     .about_text h2{
         font-size:2rem;
+        margin:0;
         
     }
     .notes{
@@ -5715,6 +5752,42 @@ header i{
         align-items:Center;
         justify-content: center;
     }
+    .whyChoose{
+        flex-direction:column-reverse;
+        height:auto;
+    }
+    .whyChoose img{
+        width:100%;
+        height:100%;
+    }
+    .whyChoose .choose_text{
+        width:100%;
+        height:100%;
+    }
+    .whyChoose .choose_text .chooseImg{
+        
+        width:100%;
+        height:100%;
+    }
+    .whyChoose .choose_text .texts{
+        overflow:scroll;
+    }
+    .whyChoose .choose_text .texts h2{
+        /* text-align:center; */
+        letter-spacing:2px;
+        margin-top:10px;
+        padding:0 10px;
+        font-size:2rem;
+    }
+    .whyChoose .choose_text .texts p{
+        padding:20px;
+        font-size:1rem;
+        color:#fff;
+        text-align:justify;
+    }
+    .whyChoose .choose_text .texts .btns{
+        margin-left:20px;
+    }
     /* hy choose us section */
     #why_choose{
         width:90%;
@@ -5814,43 +5887,12 @@ header i{
     footer h3{
         text-align: center!important;
     }
-    #team .team figure{
-        height:300px;
-        width:23%;
-       
-        border-radius:10px;
-        background:#fff;
-        box-shadow: 3px 3px 3px 3px var(--primaryColor);
-    }
-    .team figure img{
-        width:100%;
-        height:70%;
-        border-radius:50%;
-        box-shadow:2px 2px 2px 2px #c4c4c4;
-    }
-    /* .team figure figcaption{
-        
-    } */
-    .team figure figcaption h3{
-        font-weight:normal;
-        font-size:1rem;
-        color:var(--primaryColor);
-        text-align:center;
-    }
-    .team figure figcaption h3 span{
-        display:block;
-        font-size:.9rem;
-        color:var(--secondaryColor);
-        text-decoration: underline;
-    }
+    
     .chat_message h2{
         text-align: center;
         font-size:.9rem;
     }
-    #team .team figure{
-        height:250px;
-        width:70%;
-    }
+   
     /* .team figure figcaption{
         
     } */
@@ -5938,18 +5980,16 @@ header i{
     }
     #gallery .plans{
         flex-wrap:Wrap;
-        gap:.8rem;
+        gap:0;
     }
     #gallery .plan_form{
-        width:48%;
+        width:50%;
         height:150px;
     }
     #gallery .plan_form h3{
-        font-size:1rem;
+        font-size:.8rem;
     }
     #gallery .plans figcaption{
-        position:absolute;
-        top:40%;
         text-align: center;
     }
 }

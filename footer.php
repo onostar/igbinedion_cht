@@ -21,7 +21,7 @@
                         <i class="fas fa-tty"></i>
                         <div class="addtext">
                             <h4>Help Lines: </h4>
-                            <p>+2348067495426, +2348125631690, +2348071805429</p>
+                            <p>+2348061234567, +2348121234567, +2348071234567</p>
                         </div>
                     </div>
                     <div class="address email">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="subscribe_category">
                     <section id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8678621689623!2d5.576190613698923!3d6.281096627678992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d1ac3a277973%3A0x828467303bc15991!2sWindy%20hill%20hotel%20and%20suites!5e0!3m2!1sen!2sng!4v1652259336528!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                     
                     <!-- <div class="subscribe">
@@ -77,7 +77,7 @@
             </section>
         </section>
         <section class="secondaryFooter">
-            <p>&copy;2022 ICH, Benin. All Rights Reserved.</p>
+            <p>&copy;<?php echo date("Y")?> ICHT, Benin. All Rights Reserved.</p>
         </section>
     </footer>
 <!-- </div> -->

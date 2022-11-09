@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2022 at 10:01 AM
+-- Generation Time: Nov 06, 2022 at 10:40 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -55,11 +55,12 @@ CREATE TABLE `gallery` (
 INSERT INTO `gallery` (`media_id`, `title`, `photo`, `post_date`) VALUES
 (10, 'Students At The Park', 'students.jpg', '2022-07-12 17:11:04'),
 (11, 'Senior Graduates For 2021', 'college3.jpg', '2022-07-12 17:11:24'),
-(12, 'World Class Libraary', 'chairs.jpg', '2022-07-12 17:11:41'),
 (13, 'Teaching Theatre', 'college2.jpg', '2022-07-12 17:11:56'),
-(14, 'School Backyard', 'school_building.jpg', '2022-07-12 17:12:13'),
 (15, 'School Auditorium', 'college1.jpg', '2022-07-12 17:12:26'),
-(16, 'Lecturer', 'lecturer.jpg', '2022-07-12 17:12:48');
+(17, 'Lecturers', 'admin.jpeg', '2022-10-09 08:22:10'),
+(18, 'Admins In Meeting', 'staffs.jpeg', '2022-10-09 08:22:35'),
+(19, 'ICHT Students', 'banner2.jpeg', '2022-10-09 08:22:55'),
+(20, 'Students', 'banner4.jpeg', '2022-10-09 08:23:22');
 
 -- --------------------------------------------------------
 
@@ -81,12 +82,7 @@ CREATE TABLE `news_events` (
 --
 
 INSERT INTO `news_events` (`article_id`, `title`, `details`, `photo`, `event_date`, `post_date`) VALUES
-(2, 'Admin About To Start', 'We Are About To See If We Can Worki On Frnt Spqp', 'akpu-egusi.jpg', '0000-00-00', '2022-03-16 13:30:34'),
-(3, 'Studying And Treating Covid-19\'s Long Term Impact', 'While Much Has Been Learned About Covid-19 In The Year Since It Was First Detected, Its Long-term Effects On The Health Of Its Survivors May Take Years To Understand. A Major Effort To Gain That Understanding Is About To Begin\r\n\r\nWhile Much Has Been Learned About Covid-19 In The Year Since It Was First Detected, Its Long-term Effects On The Health Of Its Survivors May Take Years To Understand. A Major Effort To Gain That Understanding Is About To Begin\r\n', 'chicken_republic.png', '0000-00-00', '2022-03-16 15:59:37'),
-(4, 'PSn Biannual Meeting', 'This Month Biennial Meeting Is Going To Be Held At The HMB Board At Ring Road Close The State House Of Assembly. The Time For The Meeting Is @:00pm', 'omo_one.jpeg', '2022-05-29', '2022-05-28 14:22:46'),
-(5, 'Pharmacist Day', 'Watch Out For The Worlds Pharmacist Day.\r\nIts Gonna Be Fun Filled\r\n\r\nAlot Of Presentation', 'acpn2.jpg', '2022-06-01', '2022-05-30 11:33:52'),
-(6, 'Testing The Nemail Sender', 'This Is Testing The Email Sender And Receviver', 'acpn2.jpg', '2022-06-09', '2022-06-02 21:35:34'),
-(7, 'Testit Again', 'Jnhjkhj Jhjhkjljkj Jkl Lkjl', 'client3.jpg', '0000-00-00', '2022-06-02 21:38:24');
+(8, 'Admins In Meeting', 'A Meeeting Of The Icht Staffs', 'admin.jpeg', '0000-00-00', '2022-10-09 08:47:02');
 
 -- --------------------------------------------------------
 
@@ -180,13 +176,13 @@ ALTER TABLE `chats`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `media_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `media_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `news_events`
 --
 ALTER TABLE `news_events`
-  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `projects`

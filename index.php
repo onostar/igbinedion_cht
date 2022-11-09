@@ -161,6 +161,28 @@
             <a href="#reqMaster">Client Assessment Form</a><i class="fas fa-plus"></i>
         </div> -->
     </section>
+    <section id="trending">
+        <h4><i class="fas fa-newspaper"></i> Updates</h4>
+        <div class="trendings">
+            <marquee behavior="" direction="">
+                <?php
+                    $get_trends = $connectdb->prepare("SELECT * FROM news_events ORDER BY post_date DESC LIMIT 6"); 
+                    $get_trends->execute();
+                    $trends = $get_trends->fetchAll();
+                    foreach($trends as $trend):
+                ?>
+                        <a href="javascript:void(0)" onclick="viewArticle('<?php echo $trend->article_id?>')"><i class="fas fa-angle-double-right"></i> <?php echo $trend->title?></a>
+                <?php endforeach?>
+                <?php
+                    if(!$get_trends->rowCount() > 0 ){
+                        echo "<h3>No recent stories</h3>";
+                    }
+
+                ?>
+            </marquee>
+            
+        </div>
+    </section>
     <!-- summary of services -->
     <section id="service_summary">
         <div class="sum_serv">
@@ -233,28 +255,7 @@
             
         </div>
     </section>
-    <section id="trending">
-        <h4><i class="fas fa-newspaper"></i> Updates</h4>
-        <div class="trendings">
-            <marquee behavior="" direction="">
-                <?php
-                    $get_trends = $connectdb->prepare("SELECT * FROM news_events ORDER BY post_date DESC LIMIT 6"); 
-                    $get_trends->execute();
-                    $trends = $get_trends->fetchAll();
-                    foreach($trends as $trend):
-                ?>
-                        <a href="javascript:void(0)" onclick="viewArticle('<?php echo $trend->article_id?>')"><i class="fas fa-angle-double-right"></i> <?php echo $trend->title?></a>
-                <?php endforeach?>
-                <?php
-                    if(!$get_trends->rowCount() > 0 ){
-                        echo "<h3>No recent stories</h3>";
-                    }
-
-                ?>
-            </marquee>
-            
-        </div>
-    </section>
+    
     <main>
         <!-- features -->
         <section id="features">
